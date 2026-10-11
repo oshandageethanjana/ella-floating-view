@@ -32,6 +32,8 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   images: {
+    // Cloudflare Worker has no IMAGES binding; serve pre-optimized WebP assets directly.
+    unoptimized: true,
     formats: ['image/avif', 'image/webp']
   },
   async headers() {
