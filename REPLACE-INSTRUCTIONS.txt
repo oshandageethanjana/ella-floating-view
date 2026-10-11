@@ -1,0 +1,13 @@
+Homepage: supplied hero.mp4 replaces the hero image with muted looping playback and no visible playback controls.
+
+ELLA FLOATING VIEW — DESIGN UPDATE v8
+
+Rooms: one bedroom preview in the main showcase, with different garden and breakfast photographs for the other options. Shared-property photos have accurate captions. Repeated photo sections are replaced with a rate comparison and breakfast feature.
+Our stay: a new garden-view hero and updated supporting photos.
+Contact: new editorial layout, call/WhatsApp/directions cards, styled form, arrival help and a photo-based location preview with an optional live Google map.
+
+Copy src, public and the included documentation into your existing project. Keep your own .env.local. Run npm run build and restart the website. Fresh installation: npm ci, then npm run dev.
+
+No SQL is required for these visual updates. Supabase account configuration and live room data are unchanged. Email delivery still needs the existing email settings. Gallery remains the seven supplied photos from v5.
+
+

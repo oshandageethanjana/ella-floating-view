@@ -1,0 +1,38 @@
+ELLA FLOATING VIEW — SECURE MAIL / SECURITY SETUP
+=================================================
+
+No new npm package was added. You do NOT need to run npm install again for this update.
+
+1) Copy .env.example to .env.local
+2) Set:
+   RESEND_API_KEY=...
+   CONTACT_TO_EMAIL=the real hotel inbox that should receive website enquiries
+   CONTACT_FROM_EMAIL=Ella Floating View <bookings@YOUR-VERIFIED-DOMAIN>
+
+The FROM domain must be verified in Resend. We did not invent a hotel email address because no real email address was provided.
+
+Recommended anti-bot protection:
+3) Create a Cloudflare Turnstile site and add:
+   NEXT_PUBLIC_TURNSTILE_SITE_KEY=...
+   TURNSTILE_SECRET_KEY=...
+
+When TURNSTILE_SECRET_KEY is configured, the server rejects form submissions without a valid Turnstile verification.
+
+Built-in protections in this update:
+- same-origin POST validation
+- strict server-side validation and field length limits
+- request-size limit
+- honeypot spam field
+- IP rate limiting
+- optional Cloudflare Turnstile verification
+- no email/API secret exposed to the browser
+- plain-text email payloads (no HTML injection)
+- security headers, CSP, HSTS, nosniff, frame protection and restrictive Permissions-Policy
+- external links use noopener/noreferrer
+
+SOCIAL LINKS
+------------
+Facebook and Instagram URLs were NOT guessed. Add the real URLs in:
+src/data/site.ts -> site.socials
+
+WhatsApp is active using the supplied phone number: +94 75 200 0030.
